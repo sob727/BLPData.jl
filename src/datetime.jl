@@ -31,7 +31,7 @@ function Dates.Time(blp_datetime::BLPDateTime)
     return Dates.Time(blp_datetime.hours, blp_datetime.minutes, blp_datetime.seconds, blp_datetime.milliSeconds)
 end
 
-function Dates.DateTime(blp_datetime::BLPData.BLPDataTime)
+function Dates.DateTime(blp_datetime::BLPData.BLPDateTime)
     return Dates.DateTime(
             blp_datetime.year,
             blp_datetime.month,
