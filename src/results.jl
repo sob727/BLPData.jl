@@ -156,7 +156,8 @@ function parse_field_exceptions(field_exceptions_vec::Element{true, BLPAPI_DATAT
 
     for field_exception in get_element_value(field_exceptions_vec)
         field_sym = Symbol(get_element_value(field_exception["fieldId"]))
-        result[field_sym] = unwrap(error_handling, FieldErr(security, field_exception))
+        #result[field_sym] = unwrap(error_handling, FieldErr(security, field_exception))
+        result[field_sym] = missing
     end
 
     return result
