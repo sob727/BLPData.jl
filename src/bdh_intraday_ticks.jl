@@ -33,6 +33,7 @@ function bdh_intraday_ticks(session::Session, security::AbstractString, event_ty
         req["security"] = security
         req["startDateTime"] = date_start
         req["endDateTime"] = date_end
+        req["includeConditionCodes"] = true
         append!(req["eventTypes"], event_types)
 
         if options != nothing
