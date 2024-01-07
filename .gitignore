@@ -3,3 +3,4 @@ Manifest.toml
 contrib/*.dll
 contrib/*.so
 contrib/*.tar.gz
+.vscode
