@@ -1,6 +1,6 @@
 name = "BLPData"
-uuid = "eb622722-88ce-45f2-a8b9-c2f73a5cb263"
-authors = ["felipenoris <felipenoris@gmail.com>"]
+uuid = "c8fc423c-f169-40f1-aa8b-e1be0c81ab81"
+authors = ["sob <github.unkempt942@passmail.net>"]
 version = "0.4.5"
 
 [deps]
