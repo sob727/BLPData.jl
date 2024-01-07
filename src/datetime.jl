@@ -31,6 +31,17 @@ function Dates.Time(blp_datetime::BLPDateTime)
     return Dates.Time(blp_datetime.hours, blp_datetime.minutes, blp_datetime.seconds, blp_datetime.milliSeconds)
 end
 
+function Dates.DateTime(blp_datetime::BLPData.BLPDataTime)
+    return Dates.DateTime(
+            blp_datetime.year,
+            blp_datetime.month,
+            blp_datetime.day,
+            blp_datetime.hours,
+            blp_datetime.minutes,
+            blp_datetime.seconds,
+            blp_datetime.milliSeconds)
+end
+
 function Base.show(io::IO, dt::BLPDateTime)
 
     @printf(io, "%04d-%02d-%02dT%02d:%02d:%02d.%03d", dt.year, dt.month, dt.day, dt.hours, dt.minutes, dt.seconds, dt.milliSeconds)
