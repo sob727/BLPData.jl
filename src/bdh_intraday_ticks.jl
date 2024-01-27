@@ -33,7 +33,16 @@ function bdh_intraday_ticks(session::Session, security::AbstractString, event_ty
         req["security"] = security
         req["startDateTime"] = date_start
         req["endDateTime"] = date_end
+        # SOB add
         req["includeConditionCodes"] = true
+        req["includeExchangeCodes"] = true
+        req["includeNonPlottableEvents"] = true
+        req["includeBrokerCodes"] = true
+        req["includeRpsCodes"] = true
+        req["includeTradeTime"] = true
+        req["includeActionCodes"] = true
+        req["includeIndicatorCodes"] = true
+        # -----
         append!(req["eventTypes"], event_types)
 
         if options != nothing
